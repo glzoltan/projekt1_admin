@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">projekt1_admin</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="group">Enter Group Code</string>
+    <string name="new_task">New Task</string>
+    <string name="create_name">Group Name</string>
+    <string name="create_code">Group Code</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1036744101912",
+    "firebase_url": "https://ppoker-ac146.firebaseio.com",
+    "project_id": "ppoker-ac146",
+    "storage_bucket": "ppoker-ac146.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1036744101912:android:38948c9ff08852d663336d",
+        "android_client_info": {
+          "package_name": "com.example.projekt1_admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1036744101912-6ra8ub1ujfj5kkavthktmohudp4brc6d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.projekt1_admin",
+            "certificate_hash": "19f3270fe3998c1d9a43f29fb8f707d8e8e86306"
+          }
+        },
+        {
+          "client_id": "1036744101912-42b2hf26vbgt52hvjhuv25uhmb7k4ij5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBq2TNmQbytWswmKhQErj_t9F7Cgsg25Ns"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1036744101912-42b2hf26vbgt52hvjhuv25uhmb7k4ij5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
