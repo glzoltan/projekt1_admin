@@ -27,4 +27,21 @@ public class Fire_Task {
     public String getSTATUS() {
         return STATUS;
     }
+
+    public void setID(String ID) {
+        this.ID = ID;
+    }
+
+    public void setTASK(String TASK) {
+        this.TASK = TASK;
+    }
+
+    public void setGROUP(String GROUP) {
+        this.GROUP = GROUP;
+    }
+
+    public void setSTATUS(String STATUS) {
+        this.STATUS = STATUS;
+    }
+
 }
