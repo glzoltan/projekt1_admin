@@ -39,7 +39,7 @@ public class Task extends Fragment {
     TextView group;
     EditText task;
     Switch switch1;
-    Button add;
+    Button add,list;
     FirebaseDatabase db;
     DatabaseReference dbtask;
     public static final String TAG = "YOUR-TAG-NAME";
@@ -50,6 +50,7 @@ public class Task extends Fragment {
         View v = inflater.inflate(R.layout.fragment_task, container, false);
         group=(TextView)v.findViewById(R.id.textView2);
         add=(Button)v.findViewById(R.id.button);
+        list=(Button)v.findViewById(R.id.button2);
         task=(EditText)v.findViewById(R.id.editText);
         add.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,6 +61,13 @@ public class Task extends Fragment {
                 }
                 addTask();
                 Toast.makeText(getActivity(), "TASK IS ADDED!", Toast.LENGTH_SHORT).show();
+            }
+        });
+        list.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), activity_task_list.class);
+                startActivity(intent);
             }
         });
         readfromdb();

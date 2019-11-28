@@ -11,6 +11,9 @@ public class Fire_Task {
         this.GROUP = GROUP;
         this.STATUS = STATUS;
     }
+    public Fire_Task(){
+
+    }
 
     public String getID() {
         return ID;
