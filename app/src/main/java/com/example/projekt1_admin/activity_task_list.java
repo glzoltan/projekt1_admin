@@ -3,6 +3,7 @@ package com.example.projekt1_admin;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import java.util.List;
@@ -14,7 +15,9 @@ public class activity_task_list extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_task_list);
         mRecyclerView = (RecyclerView)findViewById(R.id.recyclerview_tasks);
-        new FirebaseDatabaseHelper().readTasks(new FirebaseDatabaseHelper.DataStatus() {
+        Intent intent1 = this.getIntent();
+        String grp = intent1.getStringExtra("grp");
+        new FirebaseDatabaseHelper(grp).readTasks(new FirebaseDatabaseHelper.DataStatus() {
             @Override
             public void DataIsLoaded(List<Fire_Task> tasks, List<String> keys) {
                 new RecyclerView_Config().setConfig(mRecyclerView,activity_task_list.this,tasks,keys);

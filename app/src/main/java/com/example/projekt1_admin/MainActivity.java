@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -20,6 +22,9 @@ import com.google.firebase.database.ValueEventListener;
 public class MainActivity extends AppCompatActivity {
     DatabaseReference db;
     public static final String TAG = "YOUR-TAG-NAME";
+    public static final String SHARED_PREFS="sharedPrefs";
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,8 +65,13 @@ public class MainActivity extends AppCompatActivity {
                     db = FirebaseDatabase.getInstance().getReference("admins");
                     Fire_Admin admin= new Fire_Admin(name);
                     db.child(name).setValue(name);
+                    SharedPreferences sharedPreferences=getSharedPreferences(SHARED_PREFS,MODE_PRIVATE);
+                    SharedPreferences.Editor editor=sharedPreferences.edit();
+                    editor.putString("groupcode",code);
+
                     Intent intent = new Intent(getApplicationContext(), TaskActivity.class);
                     intent.putExtra("elso", code);
+
                     startActivity(intent);
                 }
 

@@ -56,7 +56,7 @@ public class Task extends Fragment {
             @Override
             public void onClick(View view) {
                 if(task.getText().toString().isEmpty()){
-                    Toast.makeText(getActivity(), "Name is empty!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), "TASK IS EMPTY!", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 addTask();
@@ -66,7 +66,10 @@ public class Task extends Fragment {
         list.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent1 = getActivity().getIntent();
+                String message = intent1.getStringExtra("elso");
                 Intent intent = new Intent(getActivity(), activity_task_list.class);
+                intent.putExtra("grp", message);
                 startActivity(intent);
             }
         });
@@ -79,7 +82,9 @@ public class Task extends Fragment {
         group=(TextView) getView().findViewById(R.id.textView2);
         task=(EditText) getView().findViewById(R.id.editText);
         switch1=(Switch)getView().findViewById(R.id.switch1);
-        String fgroup=group.getText().toString();
+        Intent intent = getActivity().getIntent();
+        String fgroup = intent.getStringExtra("elso");
+
         String ftask=task.getText().toString();
         String fstatus;
         if(switch1.isChecked()==true)
