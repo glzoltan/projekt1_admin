@@ -51,6 +51,8 @@ public class FirebaseDatabaseHelper {
                     //SharedPreferences sharedPreferences = getPrefs("groupcode",)
                     if(task.getGROUP().equals(context)==true) {
                         tasks.add(task);
+
+
                     }
                 }
                 dataStatus.DataIsLoaded(tasks,keys);
