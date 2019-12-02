@@ -1,5 +1,7 @@
 package com.example.projekt1_admin;
 
+import java.util.List;
+
 public class Fire_Task {
     private String ID;
     private String TASK;
@@ -10,6 +12,7 @@ public class Fire_Task {
         this.TASK = TASK;
         this.GROUP = GROUP;
         this.STATUS = STATUS;
+
     }
     public Fire_Task(){
 
